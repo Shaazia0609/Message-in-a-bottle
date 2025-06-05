@@ -1,1 +1,93 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message in a Bottle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ocean-container">
+        <!-- Ocean waves background -->
+        <div class="waves-container">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        
+        <!-- Floating bottles container -->
+        <div class="bottles-container" id="bottlesContainer">
+            <!-- Floating bottles will be dynamically added here -->
+        </div>
+        
+        <!-- Main game interface -->
+        <div class="game-interface">
+            <header class="game-header">
+                <h1>🌊 Message in a Bottle 🍾</h1>
+                <p>Send anonymous messages to future strangers and discover messages from the past</p>
+            </header>
+            
+            <!-- Write message section -->
+            <div class="write-section" id="writeSection">
+                <h2>✍️ Cast Your Message</h2>
+                <div class="message-form">
+                    <textarea 
+                        id="messageText" 
+                        placeholder="Write your anonymous message here... Share a thought, hope, dream, or kind words for a stranger..."
+                        maxlength="500"
+                    ></textarea>
+                    <div class="char-counter">
+                        <span id="charCount">0</span>/500 characters
+                    </div>
+                    <button id="sendBottleBtn" class="bottle-btn send-btn">
+                        🍾 Send Bottle to Sea
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Find message section -->
+            <div class="find-section" id="findSection">
+                <h2>🔍 Find a Bottle</h2>
+                <p>Click on floating bottles or search the depths for messages from other souls</p>
+                <button id="findBottleBtn" class="bottle-btn find-btn">
+                    🌊 Search the Ocean
+                </button>
+            </div>
+            
+            <!-- Message display section -->
+            <div class="message-display" id="messageDisplay" style="display: none;">
+                <div class="bottle-message">
+                    <h3>📜 Message Found!</h3>
+                    <div class="message-content" id="foundMessage"></div>
+                    <div class="message-meta">
+                        <small>Sent <span id="messageTime"></span></small>
+                    </div>
+                    <button id="closeMessageBtn" class="bottle-btn close-btn">
+                        ↩️ Back to Ocean
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Success notification -->
+            <div class="notification" id="notification" style="display: none;">
+                <div class="notification-content">
+                    <span id="notificationText"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading spinner -->
+        <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching the ocean depths...</p>
+        </div>
+    </div>
+    
+    <footer class="game-footer">
+        <p>🌊 Every message is anonymous and temporary, like real bottles in the ocean 🌊</p>
+        <p>Made with ❤️ for connecting strangers across time</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
